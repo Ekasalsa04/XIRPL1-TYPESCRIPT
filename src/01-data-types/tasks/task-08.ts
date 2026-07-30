@@ -2,7 +2,11 @@
  * The school's Smart Greenhouse system automatically records the air temperature every hour from 08:00 until 15:00. 
  * Instead of storing each temperature in a separate variable, the developer wants to store all temperature readings in a 
  * single collection so they can easily calculate the highest, lowest, and average temperature later.
- * Today, the recorded temperatures are:
+ * Today, the recorded temperatures are:   
+ * Sistem Smart Greenhouse sekolah mencatat suhu udara secara otomatis setiap jam mulai pukul 08.00 hingga 15.00.
+ * Alih-alih menyimpan setiap suhu dalam variabel terpisah, pengembang ingin menyimpan semua hasil pembacaan suhu dalam
+ * satu koleksi agar nantinya dapat dengan mudah menghitung suhu tertinggi, terendah, dan rata-rata.
+ * Hari ini, suhu yang tercatat adalah:
  * 
 | Time  | Temperature (°C) |
 | ----- | ---------------- |
@@ -17,9 +21,9 @@
 
  * Task:
  * 
- * 1. Define a proper type for the temperature information.
- * 2. Store the temperature data in a single collection.
- * 3. Display the temperature data using console.log.
+ * 1. Define a proper type for the temperature information. //Definisikan tipe yang tepat untuk informasi suhu.
+ * 2. Store the temperature data in a single collection.    //Simpan data suhu dalam satu koleksi.
+ * 3. Display the temperature data using console.log.       //Tampilkan data suhu menggunakan console.log.
  */
 type TemperatureReading = {
     time: string;

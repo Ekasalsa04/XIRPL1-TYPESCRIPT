@@ -19,27 +19,27 @@ type Attendance = {
     isPresent: boolean;
 };
 const attendance1: Attendance = {
-    employeeId: "EMP001",
+    employeeId: "TLKM-1",
     employeeName: "John Doe",       
-    date: "2024-06-01",
+    date: "2010-04-21",
     checkInTime: "08:00",
     checkOutTime: "17:00",
     totalWorkingHours: 9,
     isPresent: true
 };
 const attendance2: Attendance = {
-    employeeId: "EMP002",
+    employeeId: "TLKM-2",
     employeeName: "Jane Smith",
-    date: "2024-06-01",
+    date: "2010-04-21",
     checkInTime: "08:30",
     checkOutTime: "17:30",
     totalWorkingHours: 9,
     isPresent: true
 };
 const attendance3: Attendance = {
-    employeeId: "EMP003",
+    employeeId: "TLKM-3",
     employeeName: "Michael Johnson",
-    date: "2024-06-01",
+    date: "2010-04-21",
     checkInTime: "09:00",
     checkOutTime: "18:00",
     totalWorkingHours: 9,

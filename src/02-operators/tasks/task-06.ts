@@ -13,3 +13,20 @@
  * - Discount amount
  * - Final payment
  */
+
+const ratePerHour: number = 8000;
+const totalPlayingTimeInMinutes: number = 7 * 60 + 35;
+
+const remainingMinutes: number = totalPlayingTimeInMinutes % 60;
+const totalBilledHours: number = Math.ceil(totalPlayingTimeInMinutes / 60);
+
+const totalPaymentBeforeDiscount: number = totalBilledHours * ratePerHour;
+const discount: number = totalBilledHours > 5 ? totalPaymentBeforeDiscount * 0.15 : 0;
+const finalPayment: number = totalPaymentBeforeDiscount - discount;
+
+console.log("Total Playing Time (minutes):", totalPlayingTimeInMinutes);
+console.log("Remaining Minutes after Full Hours:", remainingMinutes);
+console.log("Total Billed Hours:", totalBilledHours);
+console.log("Total Payment Before Discount:", totalPaymentBeforeDiscount);
+console.log("Discount Amount:", discount);
+console.log("Final Payment:", finalPayment);

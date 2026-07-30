@@ -23,7 +23,7 @@ type Registration = {
     isPaymentCompleted: boolean;
 };
 const registration1: Registration = {
-    studentId: "ST2026045",
+    studentId: "TLKM123",
     fullName: "Safira",
     gradeLevel: "12th Grade",
     courseId: "CS101",
@@ -34,7 +34,7 @@ const registration1: Registration = {
     isPaymentCompleted: true
 };
 const registration2: Registration = {
-    studentId: "ST2026046",
+    studentId: "TLKM1234",
     fullName: "Eka",
     gradeLevel: "11th Grade",
     courseId: "CS102",
@@ -45,7 +45,7 @@ const registration2: Registration = {
     isPaymentCompleted: false
 };
 const registration3: Registration = {
-    studentId: "ST206047",
+    studentId: "TLKM12345",
     fullName: "Salsa",
     gradeLevel: "12th Grade",
     courseId: "CS103",
