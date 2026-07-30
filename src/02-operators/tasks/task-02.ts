@@ -4,7 +4,13 @@
  * - Attendance is at least 90%
  * - All tuition fees have been paid
  * 
+ * Seorang siswa dapat mengikuti upacara kelulusan hanya jika semua syarat berikut terpenuhi:
+ * - Nilai akhir minimal 75
+ * - Tingkat kehadiran minimal 90%
+ * - Semua biaya pendidikan telah dilunasi
+ * 
  * Today, the administration receives the following student information.
+ *  Hari ini, bagian administrasi menerima informasi siswa berikut.
 | Information  | Value |
 | ------------ | ----- |
 | Final Score  | 82    |
@@ -12,7 +18,7 @@
 | Tuition Paid | Yes   |
 
  * Task: Store and display the result in a variable named "isEligible"
-
+Tugas: Simpan dan tampilkan hasilnya dalam variabel bernama "isEligible"
  */
 
 const  finalScore: number = 82;
@@ -21,4 +27,4 @@ const tuitionPaid: boolean = true;
 
 const isEligible: boolean = finalScore >= 75 && attendance >= 90 && tuitionPaid;
 
-console.log("Is the student eligible for graduation ceremony?", isEligible);    // Task: Store and display the result in a variable named "isEligible"
+console.log("Is the student eligible for graduation ceremony?", isEligible);  

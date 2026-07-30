@@ -15,3 +15,4 @@
  * 3. After the loop finishes, display: "Attendance verification completed"
 
  */
+
