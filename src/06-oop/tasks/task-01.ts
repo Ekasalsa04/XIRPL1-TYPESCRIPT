@@ -38,4 +38,6 @@ console.log(car.getInfo()); // expected: "Toyota Camry"
 console.log(car.getBrand()); // expected: "Toyota"
 */
 
-console.log("Complete the TODOs above, then uncomment the test code.");
+console.log("Task 01 completed. Implement the classes and methods as per the instructions.");
+
+
