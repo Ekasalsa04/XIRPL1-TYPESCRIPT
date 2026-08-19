@@ -22,3 +22,11 @@
  *  - Display every parking location.
  *  - Print a blank line after each floor.
  */
+
+for (let floor: number = 1; floor <= 5; floor++) { //for loop akan mengecek setiap lantai dari 1 sampai 5
+    for (let slot: number = 1; slot <= 20; slot++) { //for loop akan mengecek setiap slot dari 1 sampai 20
+        console.log("Floor " + floor + " - Slot " + slot); //Menampilkan pesan lokasi parkir untuk setiap lantai dan slot
+    }
+    console.log(""); //Menampilkan baris kosong setelah setiap lantai
+}
+

@@ -23,3 +23,11 @@
  * 2. Implement the hospital workflow using conditional statements.
  * 3. Display the patient's destination.
  */
+
+const patientName: string = "Siti Rahma"; 
+const hasappointment: boolean  = true;
+const age: number = 67;
+const hasinsurance: boolean = true;
+
+
+

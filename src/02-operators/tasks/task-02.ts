@@ -11,6 +11,7 @@
  * 
  * Today, the administration receives the following student information.
  *  Hari ini, bagian administrasi menerima informasi siswa berikut.
+ * 
 | Information  | Value |
 | ------------ | ----- |
 | Final Score  | 82    |
@@ -18,9 +19,9 @@
 | Tuition Paid | Yes   |
 
  * Task: Store and display the result in a variable named "isEligible"
-Tugas: Simpan dan tampilkan hasilnya dalam variabel bernama "isEligible"
- */
+*Tugas: Simpan dan tampilkan hasilnya dalam variabel bernama "isEligible" #Perintah
 
+ */
 const  finalScore: number = 82;
 const attendance: number = 94;
 const tuitionPaid: boolean = true;
