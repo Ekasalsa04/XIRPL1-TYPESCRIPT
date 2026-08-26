@@ -21,3 +21,17 @@
  * 3. Display the bonus result inside the function.
  * 4. Call the function for every employee.
  */
+
+function showBonusStatus(employeeName: string, performanceScore: number): void {
+    if (performanceScore >= 85) {
+        console.log(`Bonus Approved for ${employeeName}`);
+    } else {
+        console.log(`Bonus Not Approved for ${employeeName}`);
+    }
+}
+
+showBonusStatus("John Cena", 92);
+showBonusStatus("Undertaker", 76);
+showBonusStatus("Rey Mysterio", 88);
+
+console.log("Bonus status check completed.");   

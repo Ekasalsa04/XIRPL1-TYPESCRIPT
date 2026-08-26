@@ -24,3 +24,23 @@ const scores = [
     67, 79, 94, 83, 71,
     96, 65, 87, 74, 90
 ];
+
+const medalCounts = { gold: 0, silver: 0, bronze: 0, noMedal: 0 };
+let totalScore = 0;
+
+for (const score of scores) {
+    totalScore += score;
+
+    if (score >= 95) {
+        medalCounts.gold++;
+    } else if (score >= 85) {
+        medalCounts.silver++;
+    } else if (score >= 75) {
+        medalCounts.bronze++;
+    } else {
+        medalCounts.noMedal++;
+    }
+
+}
+
+const averageScore = totalScore / scores.length;

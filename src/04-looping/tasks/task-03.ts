@@ -29,7 +29,19 @@ const scores: number[] = [
   84, 92, 58, 79, 86, 71, 90, 67, 83, 76
 ];
 
+let totalScore: number = 0;
+let passingCount: number = 0;
+let failingCount: number = 0;
 
+for (let i: number = 0; i < scores.length; i++) { //for loop akan mengecek setiap skor dari array scores
+  totalScore += scores[i]; //Menambahkan skor saat ini ke total skor
 
+  if (scores[i] >= 75) { //Jika skor saat ini lebih besar atau sama dengan 75, maka siswa lulus
+    passingCount++; //Menambahkan jumlah siswa yang lulus
+  }
+  else { //Jika skor saat ini kurang dari 75, maka siswa gagal
+    failingCount++; //Menambahkan jumlah siswa yang gagal
+  }
 
+}
 
