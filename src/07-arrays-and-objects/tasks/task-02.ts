@@ -45,3 +45,22 @@ const products = [
         stock: 3,
     },
 ];
+
+//Produk yang tersedia
+const availableProducts = products.filter(product => product.stock > 0);
+const inStockProducts = products.filter(product => product.stock > 0);
+const productNames = products.map(product => product.name); // nama produk
+const totalStockValue = products.reduce(            //Total nilai semua produk, yang tersedia
+    (total, product) => total + product.price * product.stock,
+    0
+);
+
+const sortedProducts = [...availableProducts].sort( //Urutkan produk mahal → paling murah
+    (a, b) => b.price - a.price
+);
+
+console.log("Available Products:", availableProducts);
+console.log("In Stock Products:", inStockProducts);
+console.log("Product Names:", productNames);
+console.log("Total Stock Value:", totalStockValue);
+console.log("Sorted Products:", sortedProducts);

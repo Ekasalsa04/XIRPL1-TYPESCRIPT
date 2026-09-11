@@ -30,3 +30,19 @@
  * 2. Implement both screening stages.
  * 3. Display the loan decision.
  */
+
+const applicantName: string = "Andi Wijaya"; 
+const monthlyIncome: number = 10000000; 
+const creditScore: number = 725; 
+const existingDebt: number = 2500000; 
+const isPermanentEmployee: boolean = true;         
+
+if (monthlyIncome >= 8000000 && creditScore >= 700) {
+    if (existingDebt <= 0.3 * monthlyIncome && isPermanentEmployee) { //if akan mengecek apakah utang yang dimiliki pemohon kurang dari atau sama dengan 30% dari penghasilan bulanan dan pemohon merupakan karyawan tetap
+        console.log("Loan Approved"); //Jika semua kondisi terpenuhi maka menampilkan pesan pinjaman disetujui  
+    } else { //Jika kondisi kedua tidak terpenuhi
+        console.log("Manual Review"); //Menampilkan pesan tinjauan manual
+    }
+} else { //Jika kondisi pertama tidak terpenuhi
+    console.log("Loan Rejected"); //Menampilkan pesan pinjaman ditolak
+}

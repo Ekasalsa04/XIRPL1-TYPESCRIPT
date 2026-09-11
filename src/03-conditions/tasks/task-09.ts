@@ -36,3 +36,12 @@ Student Tasks
 - Translate every business rule into conditional statements.
 - Display the final machine status.
  */
+
+const isPoweredOn: boolean = true; //Menyimpan data berupa boolean apakah mesin dalam keadaan menyala atau tidak
+const temperature: number = 95; //Menyimpan data berupa angka suhu mesin
+const isHighVibration: boolean = false; //Menyimpan data berupa boolean apakah mesin mengalami getaran tinggi atau tidak
+const productionSpeed: number = 92; //Menyimpan data berupa angka kecepatan produksi mesin
+
+if (!isPoweredOn) { //if akan mengecek apakah mesin dalam keadaan mati
+    console.log("Machine Offline"); //Jika benar maka menampilkan pesan mesin offline
+}

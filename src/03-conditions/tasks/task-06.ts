@@ -28,6 +28,21 @@ const patientName: string = "Siti Rahma";
 const hasappointment: boolean  = true;
 const age: number = 67;
 const hasinsurance: boolean = true;
+const iscritical: boolean = false;
 
-
-
+if (iscritical) {
+    console.log("Patient " + patientName + " is assigned to the Emergency Room.");
+} else if (hasappointment) {
+    if (age >= 60) {
+        console.log("Patient " + patientName + " is assigned to the Priority Queue.");
+    } else {
+        console.log("Patient " + patientName + " is assigned to the Regular Queue.");
+    }
+} else {
+    if (hasinsurance) {
+        console.log("Patient " + patientName + " is assigned to the Insurance Registration Counter.");
+    } else {
+        console.log("Patient " + patientName + " is assigned to the General Registration Counter.");
+    }
+    console.log("Patient " + patientName + " is assigned to the General Registration Counter.");
+}

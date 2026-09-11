@@ -20,3 +20,31 @@ const scores = [92, 68, 84, 73, 95, 61, 88];
  * 
  * Instead of creating four separate loops, create a reusable function that receives a callback responsible for transforming a score.
  */
+
+const score = [92, 68, 84, 73, 95, 61, 88];
+
+function processScores(
+    scores: number[],
+    callback: (score: number) => string | number | boolean
+) {
+    for (const score of scores) {
+        console.log(callback(score));
+    }
+}
+
+// Menentukan lulus atau tidak
+processScores(scores, (score) => score >= 70);
+
+// Mengubah score menjadi grade
+processScores(scores, (score) => {
+    if (score >= 90) return "A";
+    if (score >= 80) return "B";
+    if (score >= 70) return "C";
+    return "D";
+});
+
+// Menambahkan bonus 5 poin
+processScores(scores, (score) => score + 5);
+
+// Menentukan Excellent atau Reguler
+processScores(scores, (score) => score > 90 ? "Excellent" : "Reguler");

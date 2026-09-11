@@ -26,21 +26,31 @@ const sales = [
 ];
 
 function calculateTotalSales(sales: number[]): number {
-
+  return sales.reduce((total, sale) => total + sale, 0);
 }
 
 function findHighestTransaction(sales: number[]): number {
-
+  return Math.max(...sales);
 }
 
 function findLowestTransaction(sales: number[]): number {
-
+  return Math.min(...sales);
 }
 
 function calculateAverageSale(sales: number[]): number {
-
+  const total = sales.reduce((total, sale) => total + sale, 0);
+  return total / sales.length;
 }
 
 function countLargeTransactions(sales: number[], minimumAmount: number): number {
-
+  return sales.filter(sale => sale > minimumAmount).length;
 }
+
+console.log("Total sales:", calculateTotalSales(sales));
+console.log("Highest transaction:", findHighestTransaction(sales));
+console.log("Lowest transaction:", findLowestTransaction(sales));
+console.log("Average transaction:", calculateAverageSale(sales));
+console.log(
+  "Transactions above Rp500,000:",
+  countLargeTransactions(sales, 500000)
+);

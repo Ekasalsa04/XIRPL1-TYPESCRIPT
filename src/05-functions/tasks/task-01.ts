@@ -31,7 +31,7 @@ for (let studentNumber = 1; studentNumber <= 30; studentNumber++) { //Loop untuk
 
 console.log("Attendance verification completed."); //Menampilkan pesan bahwa proses verifikasi kehadiran telah selesai
 const students = [ //Array yang berisi data siswa dan nilai mereka
-    { name: "Alya", assignment: 85, midterm: 80, final: 92},
+    { name: "Alya", assignment: 85, midterm: 80, final: 92}, 
     { name: "Budi", assignment: 78, midterm: 75, final: 81},
     { name: "Citra", assignment:90, midterm: 88, final: 95}
 ];
@@ -40,6 +40,3 @@ const calculateFinalGrade = (assignmentScore: number, midtermScore: number, fina
     const finalGrade = (assignmentScore * 0.3) + (midtermScore * 0.3) + (finalExamScore * 0.4); //Rumus untuk menghitung nilai akhir siswa
     return finalGrade; //Mengembalikan nilai akhir siswa
 }
-
-
-

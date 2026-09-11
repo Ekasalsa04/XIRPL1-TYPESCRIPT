@@ -21,3 +21,11 @@ const products = [
  * 
  * Instead of creating a separate loop for every operation, the developer creates a reusable processing function.
  */
+
+function processProducts(
+    products: { name: string; price: number }[],
+    callback: (product: { name: string; price: number }) => void
+): void {
+    for (const product of products) {
+        callback(product);
+    }

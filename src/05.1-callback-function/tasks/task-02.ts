@@ -29,18 +29,30 @@ function processScores(
     scores: number[],
     callback: (score: number) => void
 ): void {
-    // implementation
+    // implementasi fungsi untuk memproses setiap skor menggunakan callback
+     for (const score of scores) {
+        callback(score);
+    }
+} 
+
+function printScore(score: number): void {
+    // implementasi fungsi untuk menampilkan skor
+    function printScore(score: number) {
+    console.log(`Score: ${score}`);
 }
 
-function printScore(score: number) {
-    // implementation
+function showGrade(score: number): void {
+    if (score >= 90) {
+        console.log(`Score: ${score}, Grade: A`);
+    } else if (score >= 80) {
+        console.log(`Score: ${score}, Grade: B`);
+    } else if (score >= 70) {
+        console.log(`Score: ${score}, Grade: C`);
+    } else {
+        console.log(`Score: ${score}, Grade: D`);
+    }
 }
 
-function showGrade(score: number) {
-    // implementation
-}
-
-
-// implementation of callback function
-processScores(scores, printScore)
-processScores(scores, showGrade)
+// implementasi pemanggilan fungsi processScores dengan callback printScore dan showGrade
+processScores(scores, printScore);
+processScores(scores, showGrade); }

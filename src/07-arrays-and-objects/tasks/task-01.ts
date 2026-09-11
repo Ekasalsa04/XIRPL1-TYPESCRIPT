@@ -22,3 +22,13 @@ const students = [
   { name: "Deni", score: 74 },
   { name: "Eka", score: 55 },
 ];
+
+const studentNames = students.map(student => student.name);
+const passedStudents = students.filter(student => student.score >= 70);
+const citraStudent = students.find(student => student.name === "Citra");
+const averageScore = students.reduce((sum, student) => sum + student.score, 0) / students.length;
+
+console.log("Student Names:", studentNames);
+console.log("Passed Students:", passedStudents);
+console.log("Citra Student:", citraStudent);
+console.log("Average Score:", averageScore);

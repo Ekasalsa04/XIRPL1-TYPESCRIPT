@@ -33,19 +33,19 @@
  *  - Display the correct result.
  */
 
-const studentName: string = "Fajar Hidayat"; //Menyimpan data berupa teks nama mahasiswa
-const gpa: number = 3.86; //Menyimpan data berupa angka IPK mahasiswa
-const familyIncome: number = 4200000; //Menyimpan data berupa angka penghasilan keluarga mahasiswa
-const competitionCount: number = 4; //Menyimpan data berupa angka jumlah kompetisi yang diikuti mahasiswa
-const hasDisciplinaryRecord: boolean = false; //Menyimpan data berupa boolean apakah mahasiswa memiliki catatan disiplin atau tidak
-const documentsComplete: boolean = true; //Menyimpan data berupa boolean apakah dokumen administrasi mahasiswa lengkap atau tidak
+const studentName: string = "Fajar Hidayat"; 
+const gpa: number = 3.86; 
+const familyIncome: number = 4200000;
+const competitionCount: number = 4; 
+const hasDisciplinaryRecord: boolean = false; 
+const documentsComplete: boolean = true; 
 
-if (gpa >= 3.75 && familyIncome < 5000000) { //if akan mengecek apakah IPK lebih besar atau sama dengan 3.75 dan penghasilan keluarga kurang dari 5 juta
-    if (competitionCount >= 3 && !hasDisciplinaryRecord && documentsComplete) { //if akan mengecek apakah jumlah kompetisi lebih besar atau sama dengan 3, tidak memiliki catatan disiplin, dan dokumen administrasi lengkap
-        console.log("Scholarship Approved"); //Jika semua kondisi terpenuhi maka menampilkan pesan beasiswa disetujui
+if (gpa >= 3.75 && familyIncome < 5000000) {
+    if (competitionCount >= 3 && !hasDisciplinaryRecord && documentsComplete) { 
+        console.log("Scholarship Approved"); 
     } else { //Jika kondisi kedua tidak terpenuhi
-        console.log("Passed First Screening, but Failed Second Screening"); //Menampilkan pesan lulus seleksi pertama, tetapi gagal seleksi kedua
+        console.log("Passed First Screening, but Failed Second Screening"); 
     }
 } else { //Jika kondisi pertama tidak terpenuhi
-    console.log("Failed First Screening"); //Menampilkan pesan gagal seleksi pertama
+    console.log("Failed First Screening"); 
 }   

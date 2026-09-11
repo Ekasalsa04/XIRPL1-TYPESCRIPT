@@ -26,3 +26,36 @@ const students = [
 ];
 
 const correctAnswers = ["A", "B", "C", "A", "B"];
+
+//Menghitung score setiap siswa
+const studentScores = students.map(student => {
+    const correct = student.answers.filter(
+        (answer, index) => answer === correctAnswers[index]
+    ).length;
+
+    return {
+        ...student,
+        score: correct * 20,
+    };
+});
+
+console.log("Student Scores:", studentScores);
+
+const passedStudents = studentScores.filter(    //Siswa yang lulus 
+    student => student.score > 70
+);
+
+console.log("Passed Students:", passedStudents);
+
+const highestScore = studentScores.reduce(
+    (highest, student) =>
+        student.score > highest.score ? student : highest
+);
+
+console.log("Highest Score:", highestScore);
+
+const averageScore = //Rata-rata score kelas
+    studentScores.reduce((total, student) => total + student.score, 0) /
+    studentScores.length;
+
+console.log("Average Score:", averageScore);

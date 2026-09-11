@@ -24,6 +24,12 @@ registerStudent(`John Cena`, showRegistrationMessage)
 
 /** 
  * TASK:
- * create another function that display welcomming message for entire student!
+ * create another function that display welcomming message for entire student! 
  * Don't forget to implement callback function.
  * */
+
+const showWelcomingMessage = (name: string): void => {
+    console.log(`Welcome ${name} to our school!`);
+}
+
+registerStudent(`John Cena`, showWelcomingMessage);

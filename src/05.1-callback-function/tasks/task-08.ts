@@ -46,3 +46,47 @@ const transactions = [
  *   - Pending transactions → 1%
  *   - Cancelled transactions → 0%
  */
+
+function getCustomerNames(data: typeof transactions): string[] {
+    return data.map(transaction => transaction.customer);
+}
+
+function getTransactionCategory(amount: number): string {
+    if (amount >= 2000000) {
+        return "HIGH VALUE";
+    } else if (amount >= 1000000) {
+        return "MEDIUM VALUE";
+    } else {
+        return "LOW VALUE";
+    }
+}
+
+function calculatePlatformFee(amount: number, status: string): number {
+    if (status === "paid") {
+        return amount * 0.02;
+    } else if (status === "pending") {
+        return amount * 0.01;
+    } else {
+        return 0;
+    }
+}
+
+console.log("Customer Names:");
+console.log(getCustomerNames(transactions));
+
+console.log("\nTransaction Report:");
+
+transactions.forEach(transaction => {
+    console.log(`ID: ${transaction.id}`);
+    console.log(`Customer: ${transaction.customer}`);
+    console.log(`Amount: Rp${transaction.amount}`);
+    console.log(`Status: ${transaction.status}`);
+    console.log(`Category: ${getTransactionCategory(transaction.amount)}`);
+    console.log(
+        `Platform Fee: Rp${calculatePlatformFee(
+            transaction.amount,
+            transaction.status
+        )}`
+    );
+    console.log("----------------------");
+});
