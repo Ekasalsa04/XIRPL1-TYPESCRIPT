@@ -24,3 +24,44 @@ const borrowings = [
     { student: "Eka", bookId: 1, days: 4 },
     { student: "Andi", bookId: 3, days: 8 },
 ];
+
+//Transaksi informasi borrowing
+const andiBorrowings = borrowings.filter(
+    borrowing => borrowing.student === "Andi"
+);
+
+const borrowingBookInfo = borrowings.map(borrowing => {
+    const book = books.find(book => book.id === borrowing.bookId);
+
+    return {
+        student: borrowing.student,
+        book: book?.title,
+        category: book?.category,
+        days: borrowing.days
+    };
+});
+
+// 3. Find students who borrowed a programming book
+const programmingBorrowers = borrowings
+    .filter(borrowing => {
+        const book = books.find(book => book.id === borrowing.bookId);
+        return book?.category === "Programming";
+    })
+    .map(borrowing => borrowing.student);
+
+const totalBorrowings = borrowings.length;
+
+const averageBorrowingDuration =
+    borrowings.reduce((total, borrowing) => total + borrowing.days, 0)
+    / borrowings.length;
+
+const studentsMoreThan7Days = borrowings
+    .filter(borrowing => borrowing.days > 7)
+    .map(borrowing => borrowing.student);
+
+console.log("Andi Borrowings:", andiBorrowings);
+console.log("Borrowing Book Info:", borrowingBookInfo);
+console.log("Programming Borrowers:", programmingBorrowers);
+console.log("Total Borrowings:", totalBorrowings);
+console.log("Average Borrowing Duration:", averageBorrowingDuration);
+console.log("More Than 7 Days:", studentsMoreThan7Days);
