@@ -38,3 +38,64 @@
  * - Amount must be greater than 0.
  * - Amount cannot exceed the current balance.
  */
+
+class DigitalWallet {
+    private balance: number;
+
+    constructor(
+        private walletId: string,
+        private owner: string,
+        initialBalance: number
+    ) {
+        this.balance = initialBalance;
+    }
+
+    deposit(amount: number): void {
+        if (amount <= 0) {
+            console.log("Deposit harus lebih dari 0");
+            return;
+        }
+
+        this.balance += amount;
+        console.log(`Deposit berhasil: Rp${amount}`);
+    }
+
+    withdraw(amount: number): void {
+        if (amount <= 0) {
+            console.log("Penarikan harus lebih dari 0");
+            return;
+        }
+
+        if (amount > this.balance) {
+            console.log("Saldo tidak mencukupi");
+            return;
+        }
+
+        this.balance -= amount;
+        console.log(`Penarikan berhasil: Rp${amount}`);
+    }
+
+    getBalance(): number {
+        return this.balance;
+    }
+
+    showWalletInfo(): void {
+        console.log(`Wallet ID: ${this.walletId}`);
+        console.log(`Owner: ${this.owner}`);
+        console.log(`Balance: Rp${this.balance}`);
+    }
+}
+
+const wallet = new DigitalWallet(
+    "WAL001",
+    "Harry Maguire",
+    500000
+);
+
+wallet.showWalletInfo();
+
+wallet.deposit(200000);
+console.log(`Saldo sekarang: Rp${wallet.getBalance()}`);
+
+wallet.withdraw(100000);
+console.log(`Saldo sekarang: Rp${wallet.getBalance()}`);

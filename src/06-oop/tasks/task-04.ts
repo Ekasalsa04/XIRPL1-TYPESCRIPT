@@ -46,7 +46,21 @@ const employee = new Employee(
     "Senior Developer",
     12000000
 );
+const employee2 = new Employee(
+    "EMP002",
+    "Lionel Messi",
+    "Junior Developer",
+    8000000
+);
+const employee3 = new Employee(
+    "EMP003",
+    "Cristiano Ronaldo",
+    "Intern Developer",
+    5000000
+);
+
 
 employee.addBonus(2000000);
 
 console.log(employee.getTotalSalary());
+
